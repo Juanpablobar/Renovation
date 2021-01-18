@@ -1,0 +1,95 @@
+.services{
+    width: 100%;
+    padding: 1em 0 5em 0;
+    position: relative;
+    background: #f8f8f8;
+    h1{
+        font: 400 48px $play;
+        color: #333;
+        line-height: 42px;
+        text-align: center;
+        margin-bottom: .75em
+    }
+    h2{
+        font: 300 14px $open;
+        color: #888;
+        line-height: 24px;
+        text-align: center;
+        width: 58%;
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto
+    }
+    .services-card{
+        @include margin;
+        width: 86%;
+        display: flex;
+        margin-top: 3em;
+        position: relative;
+        .services-item{
+            margin: 0 .9em;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            perspective: 1000px;
+            .services-item-cont{
+            transition: .7s all;
+            transform-style: preserve-3d;
+            transform-origin: 50%;
+                width: 100%;
+                height: 100%;
+                .services-front,.services-back{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                } 
+                .services-front{
+                    transform: rotateY(0);
+                    z-index: 2;
+                }
+                .services-back{
+                    transform: rotateY(180deg);
+                    border: 5px solid $a1;
+                    position: relative;
+                    height: 100%;
+                    background: white;
+                    span{
+                        position: absolute;
+                        right: 0;
+                        background: $a1;
+                        color: white;
+                        padding: 1em .75em;
+                        @include flex;
+                        cursor: pointer
+                    }
+                    h3{
+                        font: 700 18px $open;
+                        color: #444;
+                        line-height: 26px;
+                        text-align: center;
+                        padding-top: 90%;
+                        margin-bottom: 1em
+                    }
+                    h4{
+                        font: 300 14px $open;
+                        color: #777;
+                        line-height: 24px;
+                        text-align: center;
+                        width: 80%;
+                        @include margin;
+                        margin-top: -.5em
+                    }
+                }
+                }
+            &:hover .services-item-cont{
+            transform: rotateY(180deg)
+                }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

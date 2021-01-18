@@ -1,0 +1,32 @@
+.counter{
+    width: 100%;
+    position: relative;
+    background-image: url(../img/counter.jpg);
+    background-size: 100%;
+    background-position: center;
+    .content-counter{
+        width: 85%;
+        @include margin;
+        @include flex;
+        padding: 3em 0 2.5em 0;
+        text-align: center;
+        .counter-item{
+            width: 100%;
+            color: white;
+            span{
+                color: white;
+                font-size: 3.5em;
+            }
+            h1{
+                font: 700 60px $open;
+                line-height: 60px;
+                margin-top: .25em;
+            }
+            h2{
+                font: 700 14px $open;
+                line-height: 20px;
+                margin-top: -2.5em;
+            }
+        }
+    }
+}     

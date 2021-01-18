@@ -1,0 +1,62 @@
+.newsletter{
+    text-align: center;
+    @include initial;
+    background-image: url(../img/counter.jpg);
+    background-size: 100%;
+    background-position: center;
+    padding: 1.5em 0 3em 0;
+    h1{
+        color: #fff;
+        margin-bottom: 1em;
+    }
+    .div-span span{
+        background: #fff
+    }
+    h2{
+        font: 300 16px $open; 
+        line-height: 24px; 
+        color: #fff;
+        margin-top: 1.5em;
+        margin-bottom: 2.5em;  
+    }
+    .newsletter-input{
+        @include flex;
+        @include margin;
+        background: #fff;
+        width: 40em;    
+        padding: 1em;
+        border:  1px solid #ccc;
+        border-radius: .35em;
+        position: relative;
+        span{
+            width: 5%;
+            @include flex;
+            color: #ccc;
+            font-size: 1.5em;
+            position: relative; 
+        }
+        input{
+            width: 95%;
+            font: 400 16px $open;
+            line-height: 23px;
+            color: #555;
+            border: 0;
+            outline: none;
+            padding: 0 1em;
+        }
+        a{
+            width: 30%;
+            font: 700 18px $open;
+            line-height: 26px;
+            color: #fff;
+            background: #000;
+            transition: .3s all;
+            outline: none;
+            position: absolute;
+            right: 0;
+            padding: .85em 0;
+            text-transform: uppercase;
+            cursor: pointer; 
+        }
+    }
+}             

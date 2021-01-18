@@ -1,0 +1,30 @@
+.footer{
+    @include initial;
+    text-align: center;
+    background: #000;
+    padding: 3em 0;
+    .footer-buttons{
+        @include initial;
+        @include flex;
+        a{
+            border-radius: 10em;
+            @include flex;
+            color: white;
+            background: $a2;
+            font-size: 18px;
+            height: 36px;
+            width: 36px;
+            margin: 0 7px;
+            transition: .3s all;
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+    h3{
+        font: 300 14px $open;
+        line-height: 24px;
+        color: #fff;;
+        margin-top: 2em;
+    }
+}

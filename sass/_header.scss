@@ -1,0 +1,175 @@
+header{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 10000;
+    .nav,.nav-bar{
+        width: 100%
+    }
+    .nav-bar{
+        display: flex;
+        background: transparent;
+        height: 5em;
+        .nav-img{
+            width: 37%;
+            a:nth-child(1){
+                animation: img .3s linear forwards;
+                position: absolute;
+            }
+            a:nth-child(2){
+                opacity: 0;
+                position: absolute !important
+            }
+        }
+        .nav-links{
+            display: flex;
+            align-items: center;
+            width: 63%;
+            animation: links .3s linear forwards;
+            position: relative;
+            a{
+                display: block;
+                font: 700 14px 'Open Sans';
+                line-height: 40px;
+                color: white;
+                margin: 0 1em;
+                cursor: pointer;
+            }
+            a:nth-last-child(1){
+                padding-left: 2em;
+                border-left: 1px solid white;
+                height: 2.5em;
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                line-height: 23px;
+                i{
+                    margin-right: .5em;
+                    font-size: .9em
+                }
+            }
+        }
+        .nav-toggle{
+            width: 10%;
+            height: 100%;
+            @include flex;
+            display: none;
+            a{
+                width: auto;
+                height: auto;
+                cursor: pointer;
+                span{
+                    display: block;
+                    height: 2px;
+                    width: 22px;
+                    margin-bottom: 4px;
+                    background: $a2;
+                }
+            }
+        }
+    }
+    .nav-menu{
+        @include initial;
+        background: #222;
+        display: none; 
+        a{
+            font: 700 14px $open;
+            line-height: 40px;
+            color: #fff;
+            display: block;
+            padding: .75em 0em .75em 2em;
+            transition: .3s all;
+            cursor: pointer;
+            border-top: 1px solid #333;
+            &:hover{
+                background: #444  
+            }
+        }
+    } 
+    .nav-bar2{
+        background: white;
+        height: 4em;
+        box-shadow: 0 10px 33px rgba(0,0,0,.1);
+        .nav-img{
+        a:nth-child(1){
+            opacity: 0 !important;
+        }
+        a:nth-child(2){
+            opacity: 1 !important;
+            animation: img2 .3s linear forwards;
+        }
+        }
+        .nav-links{
+            animation: links2 .3s linear forwards;
+            a{
+                color: #999;
+                transition: .3s all;
+                &:hover{
+                    color: #333
+                }
+            }
+            .nav-a{
+                color: $a1;
+            }
+            a:nth-last-child(1){
+                color: $a1;
+                height: 2em;
+                border-left: 1px solid $a1
+            }
+        }
+
+    }
+}
+.nav-menu2{  
+    background: #eee !important; 
+    a{
+        color: #777 !important;     
+        border-top: 1px solid #ddd !important;       
+        &:hover{
+            background: #fff !important;
+            color: #555 !important  
+        }
+        &:nth-last-of-type(1){
+            color: $a1 !important;     
+        }
+        .nav-a{
+            color: $a1 !important;
+        }      
+
+    }
+}  
+@keyframes links{
+    0%{
+        top: 0em
+    }
+    100%{
+        top: .5em
+    }
+}@keyframes links2{
+    0%{
+        top: .5em
+    }
+    100%{
+        top: 0
+    }
+}
+@keyframes img{
+    0%{
+        padding-top: .5em;
+        margin-left: 7%
+    }
+    100%{
+        padding-top: 1.25em;
+        margin-left: 8%
+    }
+}
+@keyframes img2{
+    0%{
+        padding-top: 1.25em;
+        margin-left: 8%
+    }
+    100%{
+        padding-top: .5em;
+        margin-left: 7%
+    }
+}        

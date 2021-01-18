@@ -1,0 +1,37 @@
+.purchase{
+    @include initial;
+    background-image: url(../img/counter.jpg);
+    background-size: cover;   
+    background-repeat: no-repeat;
+    background-position: center; 
+    text-align: center;
+    padding: 3em 0 4em 0; 
+    h1{ 
+        font: 500 40px $play;
+        line-height: 52px;
+        color: #fff;
+        margin-top: 0; 
+    }
+    h2{
+        font: 300 24px $open;
+        line-height: 32px;
+        color: #fff;
+        @include margin;
+        width: 60%;
+        margin-bottom: 1.5em;  
+        margin-top: -.5em;  
+    }
+    a{
+        font: 600 20px $open;
+        line-height: 29px;
+        color: #fff;
+        transition: .3s all;
+        background: #000;
+        padding: 1em 1.5em; 
+        border-radius: .25em;  
+        &:hover{
+            background: #fff;
+            color: #000;  
+        }
+    }
+}    

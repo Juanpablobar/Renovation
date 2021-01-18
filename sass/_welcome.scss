@@ -1,0 +1,83 @@
+.welcome{
+    width: 85%;
+    display: flex;
+    padding: 5em 0 7em 0;
+    margin-left: auto;
+    margin-right: auto;
+    .welcome-first{
+        width: 42.5%;
+        position: relative;
+        span{
+            width: 355px;
+            height: 533px;
+            background: transparent;
+            display: block;
+            position: absolute;
+            top: 2em;
+            left: 2em;
+            border: 10px solid $a1;
+        }
+        }
+    .welcome-second{
+        width: 57.5%;
+        h1{
+            font: 400 24px $play;
+            color: $a1;
+            line-height: 34px;
+        }
+        h2{
+            font: 400 48px $play;
+            line-height: 42px;
+            color: #333;
+            margin-top: -.25em
+        }
+        h3{
+            font: 300 14px $open;
+            color: #888;
+            line-height: 24px;
+        }
+        .welcome-third{
+            width: 100%;
+            display: flex;
+            margin-top: 1em;
+            .welcome-item{
+                text-align: center;
+                .welcome-cont{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                span{
+                    text-align: center;
+                    color: white;
+                    background: $a1;
+                    border-radius: 10em;
+                    width: 80px;
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.6em;
+                    transition: .4s all;
+                    perspective: 100px;
+                    transform-style: preserve-3d
+                }
+                }
+                    h4{
+                        font: 600 14px $open;
+                        color: #333;
+                        line-height: 20px;
+                    }
+                    h5{
+                        font: 300 14px $open;
+                        color: #333;
+                        line-height: 24px;
+                        margin-top: -1em
+                    }
+                &:hover span{
+                        background: #333;
+                        transform: rotateY(180grad);
+                    }
+            }
+        }
+    }
+}

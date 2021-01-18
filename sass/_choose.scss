@@ -1,0 +1,61 @@
+.choose{
+    @include initial;
+    text-align: center;
+    padding-top: 3em;     
+    height: 48em;      
+     h1{
+        font: 400 48px $play;
+        color: #333;
+        line-height: 42px;
+        margin-bottom: 1em;
+        a{
+            color: $a2;
+        }
+    }
+    h2{
+        font: 300 14px $open;
+        color: #888;
+        line-height: 24px;
+        @include margin;
+        width: 58%;
+        margin-top: 2em;
+    } 
+    .choose-content{
+        margin-top: 4em;
+        @include margin;
+        width: 85%;
+        height: 100%;        
+        .choose-item{
+            width: calc(100%/3);
+            float: left;
+            margin-bottom: 2em;
+            .choose-span{
+                @include flex;
+                width: 100%; 
+                span{
+                    @include span; 
+                    transition: .5s all;
+                    width: 72px;
+                    height: 72px; 
+                    font-size: 1.5em;    
+                    margin: 0;
+                }
+            }
+            &:hover .choose-span span{
+                background: #333;
+                transform: rotateY(180deg); 
+            }
+            h3{
+                font: 500 18px $play;
+                color: #000;
+                line-height: 26px;
+            }
+            h4{
+                font: 300 14px $open;
+                color: #888;
+                line-height: 24px;
+                margin-top: -.5em;
+            }   
+        }  
+    }    
+}                        

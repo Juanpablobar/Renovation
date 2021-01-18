@@ -1,0 +1,87 @@
+.packages{
+    @include initial;
+    text-align: center;  
+    padding: 2em 0 5em 0;   
+    h1{
+        font: 400 48px $play;
+        line-height: 42px;
+        margin-bottom: 1em;     
+        color: #333;
+        a{
+            color: $a1; 
+        }
+    }
+    h2{
+        font: 300 14px $open;
+        line-height: 24px;
+        color: #888; 
+        @include margin;
+        width: 58%;
+        margin-top: 1em;  
+        margin-bottom: 1em;   
+    }
+    .packages-cards{
+        @include margin;
+        width: 85%;
+        margin-top: 2em;   
+        @include flex;   
+        .packages-item{
+            width: 97.5%;   
+            margin-left: 1.25%;
+            margin-right: 1.25%;  
+            padding: 2em 0; 
+            transition: .3s all;
+            span{
+                color: #999;
+                font-size: 3em;
+                @include flex;
+            }
+            h6{
+              font: 700 30px $play;
+                line-height: 32px;
+                color: #333;  
+                margin-top: .25em;    
+            }
+            h3{
+                font: 700 48px $open;
+                color: $a2;
+                line-height: 69px;
+                margin-top: -1.25em;     
+            }
+            h4{
+                font: 400 14px $open;
+                color: #888;
+                line-height: 20px;
+                margin-top: -3.5em;    
+            }
+            h5{
+                font: 300 14px $open;
+                color: #888;
+                line-height: 24px;
+                padding: .75em 0;
+                border-top: 1px solid #eee; 
+                margin: 0;   
+                @include margin;
+                width: 90%; 
+            }   
+            h5:nth-last-of-type(1){
+                margin-bottom: 2em;  
+            }
+            a{
+                font: 600 16px $open;
+                color: #fff;
+                background: $a2;
+                transition: .3s all;
+                border-radius: .25em;
+                padding: .75em 1.25em;
+                cursor: pointer;       
+                &:hover{
+                    background: #333 
+                }
+            }
+            &:hover{
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);  
+            }
+        } 
+    }
+}             

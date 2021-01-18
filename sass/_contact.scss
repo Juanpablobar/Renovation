@@ -1,0 +1,71 @@
+.contact{
+    @include initial;
+    padding: 5em 0 3em 0;
+    background-image: url(../img/contact.jfif);
+    background-size: 100%;
+    background-position: center top;
+    .contact-cont{
+        @include margin;
+        width: 85%;
+        display: flex;
+        .contact-form{
+            width: 70%;
+            h1{
+                font: 700 36px $play;
+                color: #fff;
+                line-height: 40px;  
+                width: 90%;  
+                a{
+                    color: $a1;
+                    font-weight: 400
+                }
+            }
+            .contact-inputs{
+                width: 95%;
+                position: relative;
+                margin-top: 3em;
+                input{
+                    font: 400 18px $open;
+                    line-height: 26px #555;
+                    padding: .75em .55em;;
+                    border-radius: .25em;
+                    outline: none;
+                    border: 2px solid #fff;
+                    width: 45%;
+                    margin-bottom: 1.25em;
+                    &:nth-child(2),&:nth-child(4){
+                        margin-left: 2%
+                    }
+                    &:nth-child(5){
+                        width: 96%;
+                        height: 7em;
+                    }
+                    &:active,&:focus{
+                        border: 2px solid $a1
+                    }
+                }
+                a{
+                    font: 400 18px $open;
+                    line-height: 26px;
+                    color: #fff;
+                    transition: .3s all;
+                    padding: .5em 0;
+                    width: 100%;
+                    display: block;
+                    background: $a2;
+                    text-align: center;
+                    border-radius: .25em;
+                    &:hover{
+                        background: #555;
+                    }
+                }
+            }
+        }
+        .contact-map{
+            width: 30%;
+            .google-map{
+                height: 550px;  
+            }
+        }
+    }
+}   
